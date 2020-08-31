@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'hobbies/index'
-  get 'hobbies/show'
-  get 'hobbies/new'
-  get 'hobbies/edit'
+
   root "homes#index"
   devise_for :users
+
+  resources :homes
+  resources :todo
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
