@@ -1,2 +1,13 @@
-<h1>Hobbies#index</h1>
-<p>Find me in app/views/hobbies/index.html.erb</p>
+<h1>Hobbies</h1>
+<%= link_to 'Add Hobby', new_hobby_path %>
+<hr />
+<p1>Current Hobbies</p1>
+<ul>
+  <% @hobbies.each do |hobby| %>
+    <li>
+      <%= link_to hobby.name, hobby %>
+    </li>
+<% end %>
+</ul>
+</br>
+<%= link_to "Back", homes_path %>
